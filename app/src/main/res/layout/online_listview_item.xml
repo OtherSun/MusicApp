@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/online_listview_item"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <LinearLayout
+        android:id="@+id/online_listvew_item_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ff00"
+            android:paddingBottom="3dp"
+            android:paddingLeft="3dp"
+            android:paddingTop="3dp" />
+
+        <TextView
+            android:id="@+id/online_music_top_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:text="内地巅峰榜"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <!--<TextView-->
+        <!--android:id="@+id/online_music_more"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:padding="10dp"-->
+        <!--android:text="榜单详情"-->
+        <!--android:textColor="#ff00"-->
+        <!--android:textSize="15sp" />-->
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/online_top1_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/online_listvew_item_title"
+        android:layout_marginRight="5dp"
+        android:src="@mipmap/online_top_default_image" />
+
+    <LinearLayout
+        android:id="@+id/online_content_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/online_top1_img"
+        android:layout_below="@id/online_listvew_item_title"
+        android:layout_toLeftOf="@id/online_top1_img"
+        android:background="#00d4d4"
+        android:gravity="center_vertical|left"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:id="@+id/online_music_top1"
+            style="@style/OnlineListViewItemTopFive"
+            android:text="TOP1.以各种好啊红啊好哈哈" />
+
+        <TextView style="@style/OnlineListViewItemTopFiveLine" />
+
+        <TextView
+            android:id="@+id/online_music_top2"
+            style="@style/OnlineListViewItemTopFive"
+            android:text="TOP2.以各种世界，哈哈" />
+
+        <TextView style="@style/OnlineListViewItemTopFiveLine" />
+
+        <TextView
+            android:id="@+id/online_music_top3"
+            style="@style/OnlineListViewItemTopFive"
+            android:text="TOP3.以各种世界，哈哈" />
+
+        <TextView style="@style/OnlineListViewItemTopFiveLine" />
+
+        <TextView
+            android:id="@+id/online_music_top4"
+            style="@style/OnlineListViewItemTopFive"
+            android:text="TOP4.以各种世界，哈哈" />
+
+        <TextView style="@style/OnlineListViewItemTopFiveLine" />
+
+        <TextView
+            android:id="@+id/online_music_top5"
+            style="@style/OnlineListViewItemTopFive"
+            android:text="TOP5.以各种世界，哈哈" />
+
+        <TextView style="@style/OnlineListViewItemTopFiveLine" />
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/Top_head"
+        android:padding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/online_content_top"
+        android:layout_alignRight="@id/online_top1_img"
+        android:src="@mipmap/play_img" />
+</RelativeLayout>

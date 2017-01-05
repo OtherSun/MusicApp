@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/main_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/music_show_bar_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#ffff"
+        android:orientation="horizontal"
+        android:paddingRight="12dp">
+
+        <FrameLayout
+            android:id="@+id/music_none_info_container"
+            android:layout_width="0dp"
+            android:layout_height="?actionBarSize"
+            android:layout_weight="1"
+            android:paddingBottom="5dp"
+            android:paddingLeft="12dp"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="音乐APP 听你所想"
+                android:textColor="@color/darkGreen"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/music_info_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingBottom="5dp"
+            android:paddingLeft="12dp"
+            android:paddingTop="5dp"
+            android:visibility="gone">
+
+            <com.crs.musicapp.customwidget.CircleHeadImage
+                android:id="@+id/singer_small_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@mipmap/album" />
+
+            <LinearLayout
+                android:id="@+id/singer_info_container"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingLeft="10dp">
+
+                <TextView
+                    android:id="@+id/song_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="海阔天空"
+                    android:textColor="#f000"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/singer_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="五月天五月天五月天五月天五月天五月天五月天"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/like_song_img"
+            style="@style/MainActionBarTextView"
+            android:layout_marginLeft="25dp"
+            android:background="@mipmap/like_heart_bg" />
+
+        <TextView
+            android:id="@+id/control_song_btn_img"
+            style="@style/MainActionBarTextView"
+            android:layout_marginLeft="25dp"
+            android:background="@drawable/control_singing_btn" />
+
+        <TextView
+            android:id="@+id/next_song_btn_img"
+            style="@style/MainActionBarTextView"
+            android:layout_marginLeft="25dp"
+            android:background="@mipmap/control_next_bg" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_above="@id/music_show_bar_container"
+        android:background="@color/lightGray" />
+</RelativeLayout>

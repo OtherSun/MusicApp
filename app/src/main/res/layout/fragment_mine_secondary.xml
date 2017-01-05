@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView_mine_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/gridLayout_mine_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:id="@+id/local_music_mine"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginBottom="10dp"
+            android:background="#30f0"
+            android:gravity="center"
+            android:text="本地音乐" />
+
+        <LinearLayout
+            android:id="@+id/music_mine_secondary_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/local_music_mine"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/favorite_music_mine"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="#3ff0"
+                android:gravity="center"
+                android:text="我喜欢" />
+
+            <TextView
+                android:id="@+id/recent_music_mine"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:background="#30ff"
+                android:gravity="center"
+                android:text="最近播放" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/download_music_mine_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/music_mine_secondary_container"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/download_music_mine"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="#300f"
+                android:gravity="center"
+                android:text="下载歌曲" />
+
+            <TextView
+                android:id="@+id/download_mv_mine"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:background="#3f00"
+                android:gravity="center"
+                android:text="下载MV" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_music_playing"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#500e">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#90909090" />
+
+    <LinearLayout
+        android:id="@+id/playing_actionbar_container"
+        style="@style/PlayingActionBarStyle">
+
+        <TextView
+            android:id="@+id/activity_music_playing_back"
+            style="@style/PlayingActionBarTextView"
+            android:background="@mipmap/playing_actionbar_back" />
+
+        <TextView
+            android:id="@+id/playing_music_name"
+            style="@style/PlayingActionBarMidlleWieght"
+            android:text="演员演员演员演员演员演员演员演员演员演员演员演员演员演员" />
+
+        <TextView
+            style="@style/PlayingActionBarTextView"
+            android:background="@mipmap/playing_actionbar_more" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/playing_music_singer_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/playing_actionbar_container"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="—"
+            android:textColor="@color/white"
+            android:textDirection="rtl"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/playing_singer_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:padding="2dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:maxLength="10"
+            android:text="薛之谦"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="—"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/playing_music_singer_name"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="这里是歌词" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/music_playing_current_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00" />
+
+            <SeekBar
+                android:id="@+id/music_playing_current_progress"
+                android:progress="0"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/music_playing_total_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/music_previous_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@mipmap/player_btn_pre_normal" />
+
+            <TextView
+                android:id="@+id/music_isPlay_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/playing_btn_isplay" />
+
+            <TextView
+                android:id="@+id/music_next_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@mipmap/player_btn_next_normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/PlayingBottomContainerTextView"
+                android:background="@mipmap/playing_btn_dislike" />
+
+            <TextView
+                style="@style/PlayingBottomContainerTextView"
+                android:background="@mipmap/player_btn_repeat_normal" />
+
+            <TextView
+                style="@style/PlayingBottomContainerTextView"
+                android:background="@mipmap/playing_download_finish_btn" />
+
+            <TextView
+                style="@style/PlayingBottomContainerTextView"
+                android:background="@mipmap/player_btn_share_normal" />
+
+            <TextView
+                style="@style/PlayingBottomContainerTextView"
+                android:background="@mipmap/playing_btn_list_normal" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

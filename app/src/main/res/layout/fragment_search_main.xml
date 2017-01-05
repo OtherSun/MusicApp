@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_search_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/search_main_actionBar"
+        style="@style/MainActionBarStyle">
+
+        <TextView
+            android:id="@+id/search_hide_button"
+            style="@style/MainActionBarTextView"
+            android:background="@mipmap/arrow_bg" />
+
+        <EditText
+            android:id="@+id/search_content_editText"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="@dimen/navigation_horizontal_marginLeft"
+            android:layout_marginRight="@dimen/navigation_horizontal_marginRight"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:background="@color/lightGray"
+            android:drawableRight="@mipmap/microphone"
+            android:hint="搜你想听..."
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textColorHint="@color/darkWhite"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/editText_search_btn"
+            style="@style/MainActionBarTextView"
+            android:text="搜索"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/search_main_actionBar">
+
+        <ListView
+            android:id="@+id/history_search_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"></ListView>
+
+        <ListView
+            android:id="@+id/current_search_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></ListView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

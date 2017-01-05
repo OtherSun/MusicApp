@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_setting_main"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/setting_main_actionBar"
+        style="@style/MainActionBarStyle">
+
+        <TextView
+            android:id="@+id/setting_hide_button"
+            style="@style/MainActionBarTextView"
+            android:background="@mipmap/arrow_bg" />
+
+        <TextView
+            style="@style/MainActionBarTextView"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:text="更多    "
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+    </LinearLayout>
+</RelativeLayout>

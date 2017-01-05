@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_middle_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/middle_main_actionBar"
+        style="@style/MainActionBarStyle">
+
+        <TextView
+            android:id="@+id/main_actionBar_setting_btn"
+            style="@style/MainActionBarTextView"
+            android:background="@mipmap/setting_bg" />
+
+        <RadioGroup
+            android:id="@+id/middle_main_RadioGroup"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/mine_radioBtn"
+                style="@style/MainActionBarRadioButton.isChecked"
+                android:text="我的" />
+
+            <RadioButton
+                android:id="@+id/online_radioBtn"
+                style="@style/MainActionBarRadioButton"
+                android:text="音乐馆" />
+
+            <RadioButton
+                android:id="@+id/discover_radioBtn"
+                style="@style/MainActionBarRadioButton"
+                android:text="发现" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/main_actionBar_search_btn"
+            style="@style/MainActionBarTextView"
+            android:background="@mipmap/search_bg" />
+
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/middle_main_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/middle_main_actionBar"
+         />
+
+    <RelativeLayout
+        android:id="@+id/change_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/darkGray"
+        android:visibility="gone" />
+</RelativeLayout>
